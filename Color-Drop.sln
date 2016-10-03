@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{D9F749F2-09BF-4CCF-BA01-596779FE8EF4}") = "Color-Drop", "Assembly-CSharp.csproj", "{A0619F12-6042-191B-3191-3CA7540BD521}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0619F12-6042-191B-3191-3CA7540BD521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0619F12-6042-191B-3191-3CA7540BD521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0619F12-6042-191B-3191-3CA7540BD521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0619F12-6042-191B-3191-3CA7540BD521}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
