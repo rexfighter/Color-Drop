@@ -4,7 +4,7 @@ using System.Collections;
 public class GameController : MonoBehaviour 
 {
 
-	public GameObject floor;
+	public GameObject[] floors;
 	public Vector3 spawnValues;
 	public int floorCount;
 	public float spawnWait;
@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
 			{
 				Debug.Log ("Floor Generator Starts?");
 				//enter random color code here
-				//GameObject hazard = hazards Random
+				GameObject floor = floors[Random.Range(0, floors.Length)];
 				Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, spawnValues.z); //spawn position for floors
 				Quaternion spawnRotation = Quaternion.identity; //needed quaternion values for the instatiate? Not sure if used
 				Instantiate (floor, spawnPosition, spawnRotation); //I believe this spawns the floors
@@ -37,4 +37,15 @@ public class GameController : MonoBehaviour
 			yield return new WaitForSeconds (waveWait); //needs to add a decreasing waveWait timer
 		}
 	}
+
+	// Note: that floor has to be public
+//	GameObject RandomFloorColor(GameObject floor)
+//	{
+//		Debug.Log ("Enter RandomFloorColor method");
+//		if (!floor.Equals(null)) {
+//			floor.GetComponent<Renderer> ().material.color = Color.green;
+//			return floor;
+//		}
+//		return floor;
+//	}
 }
