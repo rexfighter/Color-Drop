@@ -26,13 +26,17 @@ public class DestroyIfMatch : MonoBehaviour
 		}
 	}
 
+	//Anytime the trigger is being touched by the player (Cube) or any other rigidBody object?
 	void OnTriggerStay (Collider trigger)
 	{
-		if (rend.material.color == trigger.gameObject.GetComponent<Renderer> ().material.color) 
+		// Since 'trigger' is a Collider object, we can just use GetComponent<Type>() directly as gameObject is inherited from Component; or so I think so...
+		if (rend.material.color == trigger.GetComponent<Renderer> ().material.color) 
+		//if (rend.material.color == trigger.gameObject.GetComponent<Renderer> ().material.color)
 		{
 			Destroy (gameObject);
 		}
 	}
+
 	//void OnCollisionStay (Collision collision)
 	//{
 	//
