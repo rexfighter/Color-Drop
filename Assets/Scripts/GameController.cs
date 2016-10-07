@@ -27,14 +27,14 @@ public class GameController : MonoBehaviour
 			for (int i = 0; i < floorCount; i++)
 			{
 				Debug.Log ("Floor Generator Starts?");
-			//enter random color code here
-			//GameObject hazard = hazards Random
-			Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, spawnValues.z); //spawn position for floors
-			Quaternion spawnRotation = Quaternion.identity; //needed quaternion values for the instatiate? Not sure if used
-			Instantiate (floor, spawnPosition, spawnRotation); //I believe this spawns the floors
-			yield return new WaitForSeconds (spawnWait); //needs to add a decreasing spawnWait timer
+				//enter random color code here
+				//GameObject hazard = hazards Random
+				Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, spawnValues.z); //spawn position for floors
+				Quaternion spawnRotation = Quaternion.identity; //needed quaternion values for the instatiate? Not sure if used
+				Instantiate (floor, spawnPosition, spawnRotation); //I believe this spawns the floors
+				yield return new WaitForSeconds (spawnWait); //needs to add a decreasing spawnWait timer
 			}
-		yield return new WaitForSeconds (waveWait); //needs to add a decreasing waveWait timer
+			yield return new WaitForSeconds (waveWait); //needs to add a decreasing waveWait timer
 		}
 	}
 }
