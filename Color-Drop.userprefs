@@ -1,11 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DestroyIfMatch.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameController.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\DestroyIfMatch.cs" Line="32" Column="14" />
+      <File FileName="Assets\Scripts\DestroyIfMatch.cs" Line="53" Column="2" />
       <File FileName="Assets\Scripts\ColorChanger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\DestroyByBoundary.cs" Line="8" Column="32" NotebookId="1" />
+      <File FileName="Assets\Scripts\FloorMovement.cs" Line="22" Column="2" />
+      <File FileName="Assets\Scripts\DestroyByBoundary.cs" Line="34" Column="74" />
+      <File FileName="Assets\Scripts\GameController.cs" Line="36" Column="79" />
+      <File FileName="..\Space-Shooter\Assets\Scripts\GameController.cs" Line="62" Column="11" NotebookId="1" />
+      <File FileName="..\Space-Shooter\Assets\Scripts\DestroyByContact.cs" Line="28" Column="4" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
