@@ -35,7 +35,9 @@ public class GameController : MonoBehaviour
 				{
 					floors [i].GetComponent<FloorMovement> ().floorSpeed = restartFloorSpeed;
 				}
-				SceneManager.LoadScene (SceneManager.GetActiveScene ().name); // or .buildIndex
+
+				SceneManager.LoadScene ("ColorDrop", LoadSceneMode.Single);
+				//SceneManager.LoadScene (SceneManager.GetActiveScene ().name); // or .buildIndex
 				//Application.LoadLevel (Application.loadedLevel); // Obsolete method
 			}
 		}
