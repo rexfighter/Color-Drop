@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ColorChanger.cs" />
+     <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\Scripts\DestroyIfMatch.cs" />
      <Compile Include="Assets\Scripts\FloorMovement.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
