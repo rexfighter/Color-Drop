@@ -6,13 +6,27 @@ using System.Collections;
 
 public class DestroyIfMatch : MonoBehaviour 
 {
+	public int scoreValue;
 	//Created shortcut for renderer
 	public Renderer rend;
+
+	private GameController gameController;
 
 	//Renderer is now the same as rend
 	void Start()
 	{
 		rend = GetComponent<Renderer> ();
+		GameObject gamecontrollerObject = GameObject.FindWithTag ("GameController");
+
+		if (gamecontrollerObject != null) 
+		{
+			gameController = gamecontrollerObject.GetComponent <GameController> ();
+		}
+
+		if (gameController == null) 
+		{
+			Debug.Log ("WHERE IS GAMECONTROLLER SCRIPT");
+		}
 	}
 
 	//When player touches the floor...
@@ -21,6 +35,7 @@ public class DestroyIfMatch : MonoBehaviour
 		//... and if the players color is the same as the floors color...
 		if (rend.material.color == collision.gameObject.GetComponent<Renderer>().material.color)
 		{
+			gameController.AddScore (scoreValue);
 			//... floor is destroyed!
 			Destroy(gameObject);
 		}
@@ -34,9 +49,9 @@ public class DestroyIfMatch : MonoBehaviour
 			if (rend.material.color == trigger.GetComponent<Renderer> ().material.color) 
 			//if (rend.material.color == trigger.gameObject.GetComponent<Renderer> ().material.color)
 			{
+				gameController.AddScore (scoreValue);
 				Destroy (gameObject);
 			}
-
 	}
 
 	//void OnCollisionStay (Collision collision)

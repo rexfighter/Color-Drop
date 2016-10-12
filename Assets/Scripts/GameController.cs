@@ -11,9 +11,13 @@ public class GameController : MonoBehaviour
 	public float spawnWait;
 	public float startWait;
 	public float waveWait;
+	public GUIText scoreText;
+	public GUIText restartText;
+	public GUIText gameOverText;
 
 	private bool gameOver;
 	private bool restart;
+	private int score;
 
 	public float restartFloorSpeed = 2;
 
@@ -21,7 +25,11 @@ public class GameController : MonoBehaviour
 	void Start() 
 	{
 		gameOver = false;
+		gameOverText.text = "";
 		restart = false;
+		restartText.text = "";
+		score = 0;
+		UpdateScore ();
 		StartCoroutine (FloorWaves ()); // Note: Coroutine used with IEnumerator
 	}
 
@@ -29,7 +37,7 @@ public class GameController : MonoBehaviour
 	{
 		if (restart)
 		{
-			if (Input.GetKeyDown (KeyCode.R))
+			if (Input.anyKey)
 			{
 				for (int i = 0; i < floors.Length; i++)
 				{
@@ -77,14 +85,27 @@ public class GameController : MonoBehaviour
 
 			if (gameOver)
 			{
+				restartText.text = "Press the Scecret Button to Restart!";
 				restart = true;
 				break;
 			}
 		}
 	}
 
+	public void AddScore (int newScoreValue)
+	{
+		score += newScoreValue;
+		UpdateScore ();
+	}
+
+	void UpdateScore ()
+	{
+		scoreText.text = "Score: " + score;
+	}
+
 	public void GameOver()
 	{
+		gameOverText.text = "Game Over n00b!";
 		gameOver = true;
 	}
 
